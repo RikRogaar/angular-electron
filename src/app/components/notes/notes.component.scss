@@ -1,0 +1,18 @@
+.notes-div {
+    #note-wrapper {
+        &:not(:last-child) {
+            @apply border-b-2 border-b-zinc-700
+        }
+        &:first-child {
+            border-radius: 1rem 1rem 0 0;
+        }
+        &:last-child {
+            border-radius: 0 0 1rem 1rem;
+        }
+
+    }
+}
+
+.bg-test {
+    background: hsl(270 67% 19%/.8);
+}
