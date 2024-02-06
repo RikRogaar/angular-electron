@@ -11,3 +11,11 @@
   <app-root></app-root>
 </body>
 </html>
+<script>
+  if (global === undefined || process === undefined) {
+    var global = window;
+    window['process'] = {
+      env: { DEBUG: undefined },
+    };
+  }
+</script>

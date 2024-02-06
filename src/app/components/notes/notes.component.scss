@@ -1,7 +1,7 @@
 .notes-div {
-    #note-wrapper {
+    app-note {
         &:not(:last-child) {
-            @apply border-b-2 border-b-zinc-700
+            @apply border-b-2 border-b-zinc-700;
         }
         &:first-child {
             border-radius: 1rem 1rem 0 0;
@@ -11,8 +11,4 @@
         }
 
     }
-}
-
-.bg-test {
-    background: hsl(270 67% 19%/.8);
 }

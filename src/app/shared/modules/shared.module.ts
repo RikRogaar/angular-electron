@@ -10,12 +10,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     HttpClientModule,
     CardComponent,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   exports: [
     CommonModule,
     CardComponent,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

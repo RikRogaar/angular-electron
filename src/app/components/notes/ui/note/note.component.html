@@ -1,0 +1,21 @@
+<div class="py-4" id="note-wrapper">
+    @if (note) {
+        <div class="flex items-center justify-between">
+            <div>
+                {{ note.title }}
+            </div>
+            <div>
+                <div
+                    class="cursor-pointer flex justify-center items-center w-9 h-9 icon-bg rounded-[50%]"
+                    (click)="showTodo()"
+                >
+                    <fa-icon [icon]="faEye" class="text-pink-500"/>
+                </div>
+            </div>
+        </div>
+    } @else {
+        <div class="text-center">
+            No notes found!
+        </div>
+    }
+</div>
