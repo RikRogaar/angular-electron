@@ -23,11 +23,11 @@ export class NotesDataService {
   });
 
   // sources
-  private todos$ = this.apiService.index();
+  private Notes$ = this.apiService.index();
 
   constructor() {
     // reducers
-    const nextTodos$ = this.todos$.pipe(
+    const nextNotes$ = this.Notes$.pipe(
       map((notes) => ({
         notes: notes,
         status: Status.SUCCESS
@@ -35,7 +35,7 @@ export class NotesDataService {
     );
 
     connect(this.state)
-      .with(nextTodos$);
+      .with(nextNotes$);
   }
 }
 

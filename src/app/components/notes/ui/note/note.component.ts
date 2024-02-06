@@ -18,15 +18,16 @@ import { ElectronService } from '../../../../shared/electron/electron.service';
   styleUrl: './note.component.scss'
 })
 export class NoteComponent {
+  @Input() note?: Note;
+
   public faEye = faEye;
   public faEyeSlash = faEyeSlash;
 
   public notesService = inject(NotesDataService);
   public electronService = inject(ElectronService);
   public isOpen: boolean = false;
-  @Input() note?: Note;
 
-  public showTodo() {
-    window.open('https://github.com', "_blank");
+  public showDetails() {
+    this.isOpen = !this.isOpen
   }
 }

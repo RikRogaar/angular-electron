@@ -1,9 +1,9 @@
 <app-card>
-    <div class="flex gap-4 flex-col">
+    <div class="flex gap-4 flex-col h-full overflow-y-scroll">
         <div class="text-lg">
             {{ notesService.notesCount() }} Note{{ notesService.notesCount() > 1 ? 's' : ''}}
         </div>
-        <div class="flex flex-col notes-div bg-zinc-800 py-2 px-6 rounded-3xl">
+        <div class="flex flex-col notes-div bg-zinc-800 py-2 px-6 rounded-3xl shadow-lg">
             @for (note of notesService.notes(); track $index) {
                 <app-note [note]="note" />
             } @empty {

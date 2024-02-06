@@ -1,0 +1,14 @@
+<app-card>
+    <div class="flex gap-4 flex-col">
+        <div class="text-lg">
+            {{ todosService.todosCount() }} To-do{{ todosService.todosCount() > 1 ? '\'s' : ''}}
+        </div>
+        <div class="flex flex-col todos-div bg-zinc-800 py-2 px-6 rounded-3xl">
+            @for (todo of todosService.todos(); track $index) {
+                <app-todo [todo]="todo" />
+            } @empty {
+                <app-todo />
+            }
+        </div>
+    </div>
+</app-card>
